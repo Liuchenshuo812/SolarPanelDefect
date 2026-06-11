@@ -12,21 +12,21 @@ This project aims to construct an efficient solar photovoltaic panel defect clas
 
 # 2. Core innovation points
 
-## 1\. Dual module collaborative attention and multi-scale feature fusion:
+  ## 1\. Dual module collaborative attention and multi-scale feature fusion:
 
 SCSA: Embedding SCSA modules at each stage, utilizing multi receptive field depth separable convolutions (kernel sizes 3, 5, 7, 9) and channel self attention to suppress complex background noise in photovoltaic panels and enhance weak signal response to small defects (such as early microcracks);
 
 LFF: Utilizing multi-scale convolution to extract defect features at different scales in parallel (from pixel level cracks to centimeter level corrosion), and dynamically weighting fusion through learnable parameters, significantly improving the recall and classification accuracy of multi class and multi-scale defects.
 
-## 2\. Hierarchical lightweight feature extraction architecture:
+  ## 2\. Hierarchical lightweight feature extraction architecture:
 
 Based on the improved FasterVIT, the original Transformer attention is removed to reduce the number of parameters. A four level hierarchical downsampling structure is constructed using depthwise separable convolution, which extracts multi-level features from local edge details to global contextual semantics step by step, adapting to the complex grid texture of photovoltaic panels and defect areas of different sizes.
 
-#3. Balance between efficiency and accuracy:
+# 3. Balance between efficiency and accuracy:
 
 The computational complexity is reduced from O (N ²) to O (N+D), the model parameter quantity is only 12.3M, and FLOPs is 6.5G. While achieving 98.02% of the overall recognition accuracy, the reasoning efficiency is significantly better than the traditional Vit model, which can be deployed in edge computing equipment (such as UAV patrol, handheld thermal imaging terminals) to support real-time intelligent operation and maintenance of photovoltaic power plants and dual carbon targets
 
-## 3.1 Experimental dataset
+  ## 3.1 Experimental dataset
 
 This study is based on a self fusion dataset for defect detection of solar photovoltaic panels, The dataset has been uploaded to the dataset/folder in the warehouse along with the project, no additional download is required.
 
@@ -36,7 +36,7 @@ This study is based on a self fusion dataset for defect detection of solar photo
 
 
 
-## 3.2 Dataset structure
+  ## 3.2 Dataset structure
 
 The dataset folder is organized as follows.
 ```
@@ -67,7 +67,7 @@ SolarPanelDefect/
 
 # 4. Experimental environment configuration
 
-## 4.1 Dependency Installation
+  ## 4.1 Dependency Installation
 
 Recommend using Anaconda to create virtual environments and ensure that the dependent versions match.
 
@@ -98,7 +98,7 @@ pip install pandas\~=2.2.0 pillow\~=10.2.0 tqdm\~=4.66.0 timm\~=1.0.8
 pip install scikit-learn\~=1.4.0 seaborn\~=0.13.0
 ```
 
-## 4.2 Hardware Requirements
+  ## 4.2 Hardware Requirements
 
 GPU: Recommended NVIDIA GPU (graphics memory ≥ 8 GB, such as RTX 3060/4060/5060, supporting CUDA 11.8+), training for 100 rounds takes about 3-4 hours, with peak graphics memory usage ≤ 7 GB;
 
@@ -140,7 +140,7 @@ Each category folder contains images of solar panel defects corresponding to tha
 
 # 6. Code usage instructions
 
-## 6.1 Model Training
+  ## 6.1 Model Training
 
 Run the train.exe script to start training, supporting configuration adjustment through parameters (adapted to multi label PV datasets):
 
@@ -204,7 +204,7 @@ Memory usage: During training, if batch\_stize=16 and there is insufficient vide
   
 # 9. References and contact information
 
-## 9.1 Reference Method
+  ## 9.1 Reference Method
 
 The paper is currently in the submission stage and will be updated to BiBTeX format after its official publication. Currently available for temporary reference:
 
@@ -226,7 +226,7 @@ The paper is currently in the submission stage and will be updated to BiBTeX for
 
 ```
 
-## 9.2 Contact Information
+  ## 9.2 Contact Information
 
 
 
