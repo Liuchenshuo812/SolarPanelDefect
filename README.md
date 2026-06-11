@@ -44,24 +44,15 @@ SolarPanelDefect/
 
  dataset/
 
-&#x20;   ├── train/
-
-&#x20;   │ ├── images/          # training set images
-
-&#x20;   │ └── labels.csv       # training set labels
-
-&#x20;   ├── val/
-
-&#x20;   │ ├── images/          # val set images
-
-&#x20;   │ └── labels.csv       # val set labels
-
-&#x20;   └── test/
-
-&#x20;   ├── images/            # test set images
-
-&#x20;   └── labels.csv         # val set labels
-
+ ├── train/
+ ├── images/          # training set images
+ └── labels.csv       # training set labels
+ ├── val/
+ ├── images/          # val set images
+ └── labels.csv       # val set labels
+ └── test/
+ ├── images/            # test set images
+ └── labels.csv         # val set labels
 
 ```
 
