@@ -1,4 +1,4 @@
-\# Solar Panel Defect Classification System
+# Solar Panel Defect Classification System
 
 Official PyTorch Implementation | Paper in Submission Stage
 
@@ -6,11 +6,11 @@ Title： 《FVLS: A Novel Deep Learning Model for Solar Photovoltaic Panel Defec
 
 Propose an improved Faster VIT model (FVLS) that combines learnable feature fusion (LFF) and spatial channel collaborative attention (SCSA) to achieve high-precision classification of multiple types of defects (cracks, poor contact, grid line breakage, corrosion) in photovoltaic panels, effectively suppressing complex background noise and multi-scale feature conflicts, and assisting in intelligent operation and maintenance of photovoltaic power plants and achieving dual carbon goals.
 
-\# 1. Research background and model positioning
+# 1. Research background and model positioning
 
 This project aims to construct an efficient solar photovoltaic panel defect classification model utilizing deep learning technology. By adopting an enhanced FasterViT network architecture, combined with the SCSA (Spatial-Channel Self-Attention) module and the LFF multi-scale feature fusion module, it achieves automatic multi-label recognition of common defects (cracks, poor contact, interconnection faults, corrosion) on photovoltaic panels, providing a high-precision and lightweight solution for real-time quality inspection of photovoltaic panels.
 
-\# 2. Core innovation points
+# 2. Core innovation points
 
 1\. Dual module collaborative attention and multi-scale feature fusion:
 
@@ -22,7 +22,7 @@ LFF: Utilizing multi-scale convolution to extract defect features at different s
 
 Based on the improved FasterVIT, the original Transformer attention is removed to reduce the number of parameters. A four level hierarchical downsampling structure is constructed using depthwise separable convolution, which extracts multi-level features from local edge details to global contextual semantics step by step, adapting to the complex grid texture of photovoltaic panels and defect areas of different sizes.
 
-\#3. Balance between efficiency and accuracy:
+#3. Balance between efficiency and accuracy:
 
 The computational complexity is reduced from O (N ²) to O (N+D), the model parameter quantity is only 12.3M, and FLOPs is 6.5G. While achieving 98.02% of the overall recognition accuracy, the reasoning efficiency is significantly better than the traditional Vit model, which can be deployed in edge computing equipment (such as UAV patrol, handheld thermal imaging terminals) to support real-time intelligent operation and maintenance of photovoltaic power plants and dual carbon targets
 
@@ -65,7 +65,7 @@ SolarPanelDefect/
 
 ```
 
-\# 4. Experimental environment configuration
+# 4. Experimental environment configuration
 
 4.1 Dependency Installation
 
@@ -112,7 +112,7 @@ PyTorch == 2.9.1
 The dataset should be organized in the following structure:
 
 ```
-#5. Experimental results
+# 5. Experimental results
 5.1 Comparison of Core Indicators
 The performance comparison between FVLS model and mainstream deep learning models in the multi label defect classification task of photovoltaic panels is as follows. The model performs better in accuracy, computational efficiency, and long tail distribution processing:
 
@@ -137,7 +137,7 @@ Each category folder contains images of solar panel defects corresponding to tha
 
 
 
-\# 6. Code usage instructions
+# 6. Code usage instructions
 6.1 Model Training
 
 Run the train.exe script to start training, supporting configuration adjustment through parameters (adapted to multi label PV datasets):
@@ -172,29 +172,23 @@ Output the final test set report (Overall Accuracy, mAP, Precision, Recall)
 
 
 
-\# 7. Project file structure
+# 7. Project file structure
 
 SolarPanelDefect/
 
-&#x20;   ├── dataset/
+├── dataset/
 
-&#x20;   ├──examples/
+├──examples/
 
-&#x20;   ├──main.py/
+├──main.py/
 
-&#x20;   ├──
+├── images/          
 
-&#x20;   ├──
-
-&#x20;   ├──
-
-&#x20;   ├── images/          
-
-&#x20;   └── README.md      
+└── README.md      
 
 
 
-\# 8. Known issues and precautions
+# 8. Known issues and precautions
 
 Multi label threshold selection: When predicting, the default threshold for defects is 0.5. If the actual application has strict requirements for false alarms of a certain type of defect, the threshold for that type can be appropriately increased (such as 0.7).
 
@@ -206,8 +200,7 @@ CUDA version issue: If you encounter CUDA incompatibility when installing PyTorc
 
 Memory usage: During training, if batch\_stize=16 and there is insufficient video memory, it can be reduced to 8 or 4, and the learning rate can be appropriately lowered
   
-
-\# 9. References and contact information
+# 9. References and contact information
 
 9.1 Reference Method
 
